@@ -1,0 +1,17 @@
+This is a document to make calculations on time complexity of word_analogy.py
+
+1) It is around ~20k (10^4) word-sets in Google Test Set
+2) It is around ~900 (10^3) words in vector_model.txt
+3) it is 300 vector values for each vector
+
+GOAL: 10^7 = 10 seconds
+NOW: ~1000 * 300 = 300,000 (10^5) * (10^4) = (10^9) / (10^7) = (10^2) = 100 seconds
+
+UPDATE: Full scan using Euclidean distance without normalizing finished in 98s on Mac machine
+        General Accuracy = 14.217827
+
+UPDATE: Full scan using Manhattan distance without normalizing finished in 186 on Mac machine
+        General Accuracy = 14.34
+
+UPDATE: Full scan using Cosine distance without normalizing finished in 654 on Mac machine
+        General Accuracy = 14.217827
